@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css"/>
   <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap-theme.css"/>
   <link rel="stylesheet" href="../bower_components/bootstrap-table/dist/bootstrap-table.css"/>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
   <!-- endbower -->
   <!-- endbuild -->
 
@@ -32,7 +33,48 @@
 
 <div class="main-wrapper">
   <div class="container">
+    <div class="row">
+      <!-- Left Sidebar -->
+      <div class="col-md-2">
 
+      </div>
+
+      <!-- Main Column -->
+      <div class="col-md-10" ng-controller="UsersController as usersCtrl">
+        <h1 class="page-header">
+          <small>Users</small>
+        </h1>
+
+        <div id="users-content">
+          <div class="row">
+            <div class="col-md-3">
+              <form id="search-form" role="form">
+                <div class="form-group has-feedback input-icon-left">
+                  <input type="text" class="form-control" placeholder="Search users" ng-model="usersCtrl.filter"
+                         ng-change="usersCtrl.searchUser()"/>
+                  <span class="glyphicon glyphicon-search form-control-feedback lightgray"></span>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="row">
+            <table id="users-tbl" data-classes="table table-hover table-no-bordered">
+              <thead>
+              <tr>
+                <th data-field="state" data-checkbox="true"></th>
+                <th data-field="id" data-formatter="idFormatter">ID</th>
+                <th data-field="name">Name</th>
+                <th data-field="senderName">Sender Name</th>
+                <th data-field="email">E-Mail Address</th>
+                <th data-field="type">Type</th>
+              </tr>
+              </thead>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -48,6 +90,12 @@
 <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
 <!-- inject:js -->
 <script src="app/index.module.js"></script>
+<script src="app/components/users/users.controller.js"></script>
+<script>
+  function idFormatter(value) {
+    return '<div style="color: #3390AA;">' + value + '</div>'
+  }
+</script>
 <!-- js files will be automatically insert here -->
 <!-- endinject -->
 </body>

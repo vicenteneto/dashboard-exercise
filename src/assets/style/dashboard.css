@@ -1,0 +1,95 @@
+/* Colors */
+.lightgray {
+  color: #d8d8d8;
+}
+
+.page-header {
+  padding-bottom: 25px;
+}
+
+#users-content {
+  padding-top: 10px;
+}
+
+#search-form {
+  font-size: 0.85em;
+}
+
+/* Search icon */
+.input-icon-left input.form-control {
+  padding-left: 34px; /* @input-height-base; */
+  padding-right: 12px; /* @padding-base-horizontal */
+}
+
+.input-icon-left .form-control-feedback {
+  left: 0;
+}
+
+.input-icon-left input.input-sm {
+  padding-left: 30px;
+@input-height-small;
+}
+
+.input-icon-left input.input-lg {
+  padding-left: 46px;
+@input-height-large;
+}
+
+.bootstrap-table {
+  padding: 0 15px;
+}
+
+.bootstrap-table .table {
+  border-bottom: 0 solid #dddddd;
+}
+
+#users-tbl {
+  color: #505050;
+  padding: 0 15px;
+}
+
+#users-tbl thead tr {
+  border-bottom: 2px solid #ccc;
+}
+
+#users-tbl thead tr th {
+  font-weight: normal;
+}
+
+label {
+  display: inline;
+  margin-bottom: 0;
+}
+
+input[name=btSelectAll],
+input[name=btSelectItem] {
+  display: none;
+}
+
+input[name=btSelectAll] + label,
+input[name=btSelectItem] + label {
+  background-color: #fff;
+  border: 1px solid #cacece;
+  padding: 6px;
+  border-radius: 3px;
+  display: inline-block;
+  position: relative;
+}
+
+input[name=btSelectAll] + label {
+  margin-bottom: -2px;
+}
+
+input[name=btSelectAll]:checked + label:after,
+input[name=btSelectItem]:checked + label:after {
+  content: '\2714';
+  font-size: 13px;
+  position: absolute;
+  top: -1px;
+  left: 1px;
+  color: #777;
+}
+
+input[name=btSelectAll]:checked + label:after {
+  top: -5px;
+}
