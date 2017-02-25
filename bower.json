@@ -1,0 +1,10 @@
+{
+  "name": "dashboard-exercise",
+  "version": "0.0.0",
+  "dependencies": {
+    "jquery": "~2.2.3",
+    "angular": "~1.6.3",
+    "bootstrap": "3.3.7",
+    "bootstrap-table": "1.11.1"
+  }
+}
