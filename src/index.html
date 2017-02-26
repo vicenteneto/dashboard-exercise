@@ -31,47 +31,65 @@
 </p>
 <![endif]-->
 
-<div class="main-wrapper">
-  <div class="container">
-    <div class="row">
-      <!-- Left Sidebar -->
-      <div class="col-md-2">
-
+<div class="container-fluid">
+  <div class="row">
+    <!-- Left Sidebar -->
+    <div class="col-sm-3 col-md-3 col-lg-3 sidebar">
+      <div class="row brand padding">
+        <div class="col-sm-6 col-md-6 col-lg-6">
+          <img alt="Byrd Technologies" src="assets/images/byrd.png" style="width: 100%">
+        </div>
       </div>
 
-      <!-- Main Column -->
-      <div class="col-md-10" ng-controller="UsersController as usersCtrl">
-        <h1 class="page-header">
-          <small>Users</small>
-        </h1>
+      <div class="row padding">
+        <span class="navbar-text">Dashboard</span>
+      </div>
 
-        <div id="users-content">
-          <div class="row">
-            <div class="col-md-3">
-              <form id="search-form" role="form">
-                <div class="form-group has-feedback input-icon-left">
-                  <input type="text" class="form-control" placeholder="Search users" ng-model="usersCtrl.filter"
-                         ng-change="usersCtrl.searchUser()"/>
-                  <span class="glyphicon glyphicon-search form-control-feedback lightgray"></span>
-                </div>
-              </form>
-            </div>
-          </div>
+      <div class="row padding">
+        <span class="navbar-text bold" style="color: #9e9e9e;">DATA EXPLORER</span>
+      </div>
 
-          <div class="row">
-            <table id="users-tbl" data-classes="table table-hover table-no-bordered">
-              <thead>
-              <tr>
-                <th data-field="state" data-checkbox="true"></th>
-                <th data-field="id" data-formatter="idFormatter">ID</th>
-                <th data-field="name">Name</th>
-                <th data-field="senderName">Sender Name</th>
-                <th data-field="email">E-Mail Address</th>
-                <th data-field="type">Type</th>
-              </tr>
-              </thead>
-            </table>
+      <div class="row">
+        <ul class="nav nav-pills nav-stacked">
+          <li class="selected"><a href="#">Users</a></li>
+          <li><a href="#">Shipments</a></li>
+          <li><a href="#">Pickups</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Main Column -->
+    <div class="col-sm-9 col-md-9 col-lg-9" ng-controller="UsersController as usersCtrl">
+      <h1 class="page-header">
+        <small>Users</small>
+      </h1>
+
+      <div id="users-content">
+        <div class="row">
+          <div class="col-sm-3 col-md-3 col-lg-3">
+            <form id="search-form" role="form">
+              <div class="form-group has-feedback input-icon-left">
+                <input type="text" class="form-control" placeholder="Search users" ng-model="usersCtrl.filter"
+                       ng-change="usersCtrl.searchUser()"/>
+                <span class="glyphicon glyphicon-search form-control-feedback lightgray"></span>
+              </div>
+            </form>
           </div>
+        </div>
+
+        <div class="row">
+          <table id="users-tbl" data-classes="table table-hover table-no-bordered">
+            <thead>
+            <tr>
+              <th data-field="state" data-checkbox="true"></th>
+              <th data-field="id" data-formatter="idFormatter">ID</th>
+              <th data-field="name">Name</th>
+              <th data-field="senderName">Sender Name</th>
+              <th data-field="email">E-Mail Address</th>
+              <th data-field="type">Type</th>
+            </tr>
+            </thead>
+          </table>
         </div>
       </div>
     </div>

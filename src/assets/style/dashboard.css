@@ -1,6 +1,13 @@
-/* Colors */
 .lightgray {
   color: #d8d8d8;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.padding {
+  padding-left: 1em;
 }
 
 .page-header {
@@ -92,4 +99,33 @@ input[name=btSelectItem]:checked + label:after {
 
 input[name=btSelectAll]:checked + label:after {
   top: -5px;
+}
+
+.sidebar {
+  padding-left: 25px;
+}
+
+.brand {
+  margin-top: 40px;
+  margin-bottom: 25px;
+}
+
+.nav-pills li {
+  border-radius: 0;
+}
+
+.nav-pills li.selected {
+  font-weight: bold;
+  border-left: 4px solid #4CA7E0;
+}
+
+.nav-pills li a,
+.nav-pills li.selected a {
+  border-radius: 0;
+  padding-left: 29px;
+  color: #505050;
+}
+
+.nav-pills li.selected a {
+  padding-left: 25px;
 }
